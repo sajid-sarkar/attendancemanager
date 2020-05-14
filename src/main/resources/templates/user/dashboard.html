@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <div th:replace="fragments/header :: header-css"/>
+  <link rel="stylesheet" th:href="@{/css/login.css}"/>
+  <title>Dashboard | Attandance Manager</title>
+</head>
+<body>
+  <div th:replace="fragments/header :: header"/>
+
+  <div class="container bg-light">
+    <h1 class="text-center">Welcome! <span th:text="${user.fullname}"></span></h1>
+    <div class="row justify-content-center">
+
+      <div class="col-sm-6">
+
+          <table class="table table-borderless table-dark">
+            <tr>
+              <th>User Name</th>
+              <td th:text="${user.fullname}"></td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td th:text="${user.email}"></td>
+            </tr>
+            <tr>
+              <th>Designation</th>
+              <td th:text="${user.designation}"></td>
+            </tr>
+          </table>
+
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>
